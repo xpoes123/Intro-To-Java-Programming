@@ -1,6 +1,17 @@
 //Programmer: David Jiang, MADLIB 1, 10-2-18
 //Github: https://github.com/xpoes123
 //Repo link: https://github.com/xpoes123/Intro-To-Java-Programming/blob/master/madlib
+/*
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+To Do list
+1. Refind the Welcome photo with reverse searching
+2. Upload to Github
+3.Turn in 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+*/
+
+
+
 
 //framework
 import javax.swing.*;
