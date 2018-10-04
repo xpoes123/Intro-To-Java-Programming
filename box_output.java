@@ -1,6 +1,8 @@
 //Programmer: David Jiang, MADLIB 1, 10-2-18
 //Github: https://github.com/xpoes123
 //Repo link: https://github.com/xpoes123/Intro-To-Java-Programming/blob/master/madlib
+//Original Story: https://www.youtube.com/watch?v=omj9K2J71Zk
+//Images: https://goo.gl/MwaFwL \nhttps://goo.gl/pD2oFn \nhttps://goo.gl/3g81ZW \nhttps://goo.gl/9uhkUx \nhttps://goo.gl/YbnpFp
 /*
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 To Do list
@@ -10,9 +12,6 @@ To Do list
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 */
 
-
-
-
 //framework
 import javax.swing.*;
 public class box_output { 
@@ -20,18 +19,17 @@ public class box_output {
          //Declaring String Variables
          String noun, verb, name, name2, adjective;
          //ImageIcon 
-         ImageIcon Verb = new ImageIcon("Capture.PNG");
-         ImageIcon Noun = new ImageIcon("Capture2.PNG");
+         ImageIcon Verb = new ImageIcon("/media/Capture.PNG");
+         ImageIcon Noun = new ImageIcon("/media.Capture2.PNG");
          ImageIcon Name = new ImageIcon("Capture3.PNG");
-         ImageIcon Adjective = new ImageIcon("adjective.png");
-         ImageIcon Welcome = new ImageIcon("welcome-.png");
-         ImageIcon Stack = new ImageIcon("stack.png");
+         ImageIcon Adjective = new ImageIcon("/media/adjective.png");
+         ImageIcon Welcome = new ImageIcon("/media/welcome.png");
+         ImageIcon Stack = new ImageIcon("/media/stack.png");
+         ImageIcon Gif = new ImageIcon("/media/sheldon.gif");
          //DropDown Menu options
-         String[ ] verbitems = {"Run","Jump","Dance", "Sit" };
+         String[ ] verbitems = {"Run","Jump","Dance", "Pee" };
          //Introduction Dialogue
          JOptionPane.showMessageDialog(null, "Welcome to David Jiang's Madblib!", "Welcome!",-1, Welcome);
-         JOptionPane.showMessageDialog(null, "Images: https://goo.gl/MwaFwL \nhttps://goo.gl/pD2oFn \nhttps://goo.gl/3g81ZW \nhttps://goo.gl/9uhkUx \nhttps://goo.gl/YbnpFp", "Images", -1, null);
-         JOptionPane.showMessageDialog(null, "And of course, thanks to the 50 tabs of Stack Overflow.", "10% Knowledge 90% Stack Overflow", -1, Stack);
          JOptionPane.showMessageDialog(null, "Madlib works by you giving random words with the only parameter being the part of speech, afterwards you will see what your story becomes", "Instructions", -1, null);
          
          //Madlib Questions
@@ -45,7 +43,9 @@ public class box_output {
          
          adjective = (String)JOptionPane.showInputDialog(null, "Give me an adjective?", "Adjevtive", -1, Adjective, null, null);
          //Final Story
-        JOptionPane.showMessageDialog(null, "There once was a brave lad named " + name + "\nWith a fi fi fiddle dee dee, \nwho face a" +adjective + noun + "\n while "+ name2+ " just needed to "+ verb, "Your MadLib", -1, null);
+        JOptionPane.showMessageDialog(null, "There once was a brave lad named " + name + "\nWith a fi fi fiddle dee dee, \nwho faced a " +adjective+" "+ noun + "\nwhile "+ name2+ " just needed to "+ verb, "Your MadLib", -1, null);
+        //video
+        JOptionPane.showMessageDialog(null, "Video", "First Few Frames", -1, Gif);
    }
 
 }
