@@ -1,0 +1,15 @@
+import java.util.*;
+public class operation
+{
+   public static void main(String[] args)
+   {
+      double cel;
+      Scanner keyboard = new Scanner(System.in);
+      System.out.println("What is the temp in F?");
+      cel = keyboard.nextDouble();
+      System.out.println("It is " + cel +"\u00f8F F right now!");
+      cel = (cel - 32) * 5/9;
+      System.out.println("But it is " + cel + "\u00f8F C right now!");
+
+   }
+}
