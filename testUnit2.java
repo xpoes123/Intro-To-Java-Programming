@@ -9,6 +9,7 @@ Github: https://github.com/xpoes123/Intro-To-Java-Programming/blob/master/testUn
 import java.util.*;
 import java.text.*;
 import javax.swing.*;
+import java.lang.*;
 
 public class testUnit2
 {
@@ -26,7 +27,8 @@ public class testUnit2
    double taxAmount = 0;
    double total2 = 0;
    
-   Input = JOptionPane.showInputDialog(null, "How many pi phones did they buy?");
+   Input = JOptionPane.showInputDialog(null, "How many pi phones did they buy?(All negative values won't be tolerated)");
+   
    
    ImageIcon NSB = new ImageIcon("download.jfif");
    
@@ -38,8 +40,9 @@ public class testUnit2
    JOptionPane.showMessageDialog(null, "Not a number. Try again.");
    System.exit(0);
    }
+   piBought = Math.abs(piBought);
    
-   Input = JOptionPane.showInputDialog(null, "How many Swindles did they buy?");
+   Input = JOptionPane.showInputDialog(null, "How many Swindles did they buy?(All negative values won't be tolerated)");
    
    try{
    swindBought = Integer.parseInt(Input);
@@ -49,8 +52,9 @@ public class testUnit2
    JOptionPane.showMessageDialog(null, "Not a number. Try again.");
    System.exit(0);
    }
+   swindBought = Math.abs(swindBought);
    
-   total1 = (piBought * pi) +  (swindBought + swind);
+   total1 = (piBought * pi) +  (swindBought * swind);
    taxAmount = (total1 * tax);
    total2 = taxAmount + total1;
    tax = tax * 100;
