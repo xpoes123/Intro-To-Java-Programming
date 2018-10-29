@@ -28,6 +28,8 @@ public class testUnit2
    
    Input = JOptionPane.showInputDialog(null, "How many pi phones did they buy?");
    
+   ImageIcon NSB = new ImageIcon("download.jfif");
+   
    try{
    piBought = Integer.parseInt(Input);
    }
@@ -56,6 +58,6 @@ public class testUnit2
    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
    Calendar cal = Calendar.getInstance();
    
-   JOptionPane.showMessageDialog(null, "Date: "+dateFormat.format(cal.getTime()) + "\nSwindles quantity: " + swindBought + "*$59.75"+"\nPiPhones quantity: "+piBought + "*$37.50" +"\nSubtotal: $" + total1 + "\nTax " + tax + "%: $" + taxAmount + "\nTotal: $" + total2);
+   JOptionPane.showMessageDialog(null, "Local Business Name" + "\nDate: "+dateFormat.format(cal.getTime()) + "\nSwindles quantity: " + swindBought + "*$59.75"+"\nPiPhones quantity: "+piBought + "*$37.50" +"\nSubtotal: $" + total1 + "\nTax " + tax + "%: $" + taxAmount + "\nTotal: $" + total2+"\n\nTell us what you think! \nWe want to hear about your recent experience in one of our shops. \nKeep the receipt, take our 1-minute survey and receive a surprise offer!\nhttps://tinyurl.com/mhslocalsurvey", "Recipt", -1, NSB);
    }
-}
+   }
