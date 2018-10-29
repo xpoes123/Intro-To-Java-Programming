@@ -1,7 +1,7 @@
 /*
 Programmer: David Jiang
 Name: Recipt Performance Task
-Github:
+Github: https://github.com/xpoes123/Intro-To-Java-Programming/blob/master/testUnit2.java
 */
 
 
@@ -56,6 +56,6 @@ public class testUnit2
    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
    Calendar cal = Calendar.getInstance();
    
-   JOptionPane.showMessageDialog(null, "Date: "+dateFormat.format(cal.getTime()) + "\nSubtotal: $" + total1 + "\nTax " + tax + "%: $" + taxAmount + "\nTotal: $" + total2);
+   JOptionPane.showMessageDialog(null, "Date: "+dateFormat.format(cal.getTime()) + "\nSwindles quantity: " + swindBought + "*$59.75"+"\nPiPhones quantity: "+piBought + "*$37.50" +"\nSubtotal: $" + total1 + "\nTax " + tax + "%: $" + taxAmount + "\nTotal: $" + total2);
    }
 }
