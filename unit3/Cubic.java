@@ -49,7 +49,7 @@ public class perfTaskTest
    JOptionPane.showMessageDialog(null, "Not a number. Try again.");
    System.exit(0);
    }
-  place = (Math.cbrt((((b*c)/(6*a*a)) - ((d)/(2*a)) - ((b*b*b)/(27*a*a*a)))+ Math.sqrt((Math.pow(((b*c)/(6*a*a) - ((d)/(2a)-((b*b*b)/(27*a*a*a), 2) + Math.pow(((c)/(3*a))-((b*b)/(9*a*a)), 3) + Math.cbrt(((b*c)/(6*a*a)-((d)/(2*a))-((b*b*b)/(27*a*a*a))-(Math.sqrt(Math.pow(((b*c)/(6*a*a))-((d)/(2*a))-((b*b*b)/(27*a*a*a)),2)+Math.pow(((c)/(3*a))-((b*b)/(9*a*a)), 3)-((b)/(3*a));
+ place = Math.cbrt(((b*c)/(6*a*a)) - ((d)/(2*a)) - ((b*b*b)/(27*a*a*a))+ (Math.sqrt((Math.pow(((b*c)/(6*a*a) - ((d)/(2a)-((b*b*b)/(27*a*a*a), 2) + Math.pow(((c)/(3*a))-((b*b)/(9*a*a)), 3)) + (Math.cbrt(((b*c)/(6*a*a))-((d)/(2*a))-((b*b*b)/(27*a*a*a))-(Math.sqrt(Math.pow(((b*c)/(6*a*a))-((d)/(2*a))-((b*b*b)/(27*a*a*a)),2))+(Math.pow(((c)/(3*a))-((b*b)/(9*a*a)), 3))-((b)/(3*a));
   System.out.print(place);
       }
 }
