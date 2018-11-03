@@ -1,3 +1,4 @@
+package cubic;
 import javax.swing.*;
 import java.util.*;
 import java.text.*;
@@ -6,11 +7,11 @@ public class perfTaskTest
 {
    public static void main(String[]args)
    {
-   int a = 0;
-   int b = 0;
-   int c = 0;
-   int d = 0;
-   double root1, root2, root3, rootsTester, place;
+   double a = 0;
+   double b = 0;
+   double c = 0;
+   double d = 0;
+   double root1, root2, root3, rootsTester, place, place2, place3;
    String Input;
    Input = JOptionPane.showInputDialog(null, "What is your a value?");
    try{
@@ -31,7 +32,6 @@ public class perfTaskTest
    JOptionPane.showMessageDialog(null, "Not a number. Try again.");
    System.exit(0);
    }
-    +
    Input = JOptionPane.showInputDialog(null, "What is your c value?");
    try{
    c = Integer.parseInt(Input);
@@ -41,6 +41,7 @@ public class perfTaskTest
    JOptionPane.showMessageDialog(null, "Not a number. Try again.");
    System.exit(0);
    }
+   Input = JOptionPane.showInputDialog(null, "What is your d value?");
    try{
    d = Integer.parseInt(Input);
    }
@@ -49,7 +50,10 @@ public class perfTaskTest
    JOptionPane.showMessageDialog(null, "Not a number. Try again.");
    System.exit(0);
    }
- place = Math.cbrt(((b*c)/(6*a*a)) - ((d)/(2*a)) - ((b*b*b)/(27*a*a*a))+ (Math.sqrt((Math.pow(((b*c)/(6*a*a) - ((d)/(2a)-((b*b*b)/(27*a*a*a), 2) + Math.pow(((c)/(3*a))-((b*b)/(9*a*a)), 3)) + (Math.cbrt(((b*c)/(6*a*a))-((d)/(2*a))-((b*b*b)/(27*a*a*a))-(Math.sqrt(Math.pow(((b*c)/(6*a*a))-((d)/(2*a))-((b*b*b)/(27*a*a*a)),2))+(Math.pow(((c)/(3*a))-((b*b)/(9*a*a)), 3))-((b)/(3*a));
-  System.out.print(place);
+   place = Math.cbrt(((Math.pow(-b,3)/(27*Math.pow(a,3)) + ((b*c)/(6*Math.pow(a,2)) -((b)/(a*2))))));
+   place2 = (Math.sqrt(Math.pow((((Math.pow(-b,3))/(27*Math.pow(a,3))) + ((b*c)/(6*Math.pow(a,2)) -((d)/(2*a)))), 2)+(Math.pow((((c)/(3*a))-((b*b)/(9*a*a))),3))));
+
+    System.out.println(place);
+    System.out.println(place2);
       }
 }
