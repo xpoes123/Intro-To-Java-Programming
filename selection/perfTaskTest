@@ -1,0 +1,67 @@
+//David Jiang
+import javax.swing.*;
+
+public class perfTaskTest
+{
+   public static void main(String[] args)
+   {
+	   int vf;
+      ImageIcon open = new ImageIcon("c4.PNG");
+      JOptionPane.showMessageDialog(null, "What kind of chess player are you?");
+      //Question 1
+	   Object[] options1 = {"E4", "D4", "C4"};
+
+	   int v = JOptionPane.showOptionDialog(null, "As white do you prefer?", "Opening", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+		        options1, null);
+              
+	   v += 1;
+	   System.out.println(v);
+	   //Question 2
+	   Object[] options2 = { "E5", "Sicilian", "French", "Other" };
+      
+	   int v2 = JOptionPane.showOptionDialog(null, "What is your response to E4?", "E4 Response", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+		        options2, null);
+	   v2 += 1;
+	   System.out.println(v2);
+	   //Question 3
+	   Object[] options3 = { "Theory is important, but only a few lines.", "It is important to get positionally ahead with your opening.", "Opening is everything, if  you can get your opponent uncomfortable you can win." };
+
+	   int v3 = JOptionPane.showOptionDialog(null, "Do you think opening theory is important?", "Theory", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+		        options3, null);
+	   v3 += 1;
+	   System.out.println(v3);
+	   //Question 4
+	   Object[] options4 = { "99% of the game", "75% of the game", "Rendered null by good positioning" };
+
+	   int v4 = JOptionPane.showOptionDialog(null, "Tactics are?", "Midgame", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+		        options4, null);
+      //Question 5
+      Object[] options5 = { "Fairly important, you can't win without endgames.", "Very Important, can't win without", "You can figure it out on the way through" };
+
+	   int v5= JOptionPane.showOptionDialog(null, "Endgames are?", "Endgame", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null,
+		        options5, null);
+              
+      //Logic Testing        
+	   v4 += 1;
+	   System.out.println(v4);
+      v5 += 1;
+	   System.out.println(v5);
+	   
+	   vf = v+v2+v3+v4+v5;
+	   System.out.println(vf);
+	   
+      //Logic Statements
+      if (vf <= 6)
+      {
+      JOptionPane.showMessageDialog(null, "You are a strong mainline player, that probably plays E4. Tactics are very important to you and you play games by intuition. Caruana, Kasparov");
+      }
+      else if (vf <= 12)
+      {
+      JOptionPane.showMessageDialog(null, "You aren't comfortable with unconvential lines however you still have a strong opening repitorie. Your game is fairly intuition however memorizing tactics and skills is also important. Nakamaura, So");
+      }
+      else
+      {
+      JOptionPane.showMessageDialog(null, "Memorization is key, you like playing theory that no one else knows to throw your opponent off their game, who needs tactics if you are in a better positition? Carlsen");
+      }
+   }
+}
