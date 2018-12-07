@@ -1,0 +1,37 @@
+import java.util.*;
+import javax.swing.*;
+public class Dice
+{/*import random
+r1 = 0
+r2 = 1
+while r1 != r2:
+    r1 = random.randint(1, 6)
+    r2 = random.randint(1, 6)
+    print(r1)
+    print(r2)
+    print(r1 + r2)*/
+
+public static void main(String[] args)
+{
+Random randint = new Random();
+
+
+int r1 = 9;
+int r2 = 1;
+int r3;
+int c = 0;
+while (r1 != r2)
+{
+JOptionPane.showMessageDialog(null, "Rerolling");
+r1 = randint.nextInt(6)+1;
+r2 = randint.nextInt(6)+1;
+r3 = r1 +r2;
+c += 1;
+JOptionPane.showMessageDialog(null, r1);
+JOptionPane.showMessageDialog(null, r2);
+JOptionPane.showMessageDialog(null, r3);
+}
+JOptionPane.showMessageDialog(null, "Complete");
+JOptionPane.showMessageDialog(null, "It took " + c + " rolls");
+}
+}
