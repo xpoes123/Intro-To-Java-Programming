@@ -1,0 +1,36 @@
+import java.util.*;
+import javax.swing.*;
+public class pincode
+{
+public static void main(String[] args)
+{
+String input;
+Integer pin = 12345;
+Integer UPin = 10101;
+input = JOptionPane.showInputDialog(null, "What is your pin?");
+try
+{
+UPin = Integer.parseInt(input);
+}
+catch(NumberFormatException e)
+   {
+   JOptionPane.showMessageDialog(null, "Not a number. Try again.");
+   System.exit(0);
+   }
+while (pin != UPin);
+   {
+   JOptionPane.showMessageDialog(null, "That is not correct");
+   input = JOptionPane.showInputDialog(null, "What is your pin?");
+try
+{
+UPin = Integer.parseInt(input);
+}
+catch(NumberFormatException e)
+   {
+   JOptionPane.showMessageDialog(null, "Not a number. Try again.");
+   System.exit(0);
+   }
+   }
+JOptionPane.showMessageDialog(null, "Pin Accepted");
+}
+}
