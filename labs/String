@@ -1,0 +1,64 @@
+import java.util.*;
+import javax.swing.*;
+ 
+class perfTask
+{
+public static String word, word2 = "";
+public static void main(String[]args)
+   {
+   test();
+   test2();
+   test3();
+   }
+   public static void test()
+   {
+     
+      word = JOptionPane.showInputDialog("Enter a string to reverse");
+           
+      int leng2 = word.length();
+     
+      for (int i = leng2 - 1 ; i >= 0 ; i--)
+         word2 = word2 + word.charAt(i);
+         
+      JOptionPane.showMessageDialog(null, word2);
+      
+   }
+   public static void test2()
+   {
+   word = word.replace( 'a', '*' );
+   word = word.replace('e', '*');
+   word = word.replace('i', '*');
+   word = word.replace('o', '*');
+   word = word.replace('u', '*');
+   JOptionPane.showMessageDialog(null, word);
+   }
+   public static void test3()//Lol I'm pretty sure this is super inefficient. Mrs. Hunt, enlighten me!
+   {
+	   int n = word.length();
+	   int n2 = n-n;
+	   boolean b3 = true;
+	       while(n2 != n)
+	       {
+	    	  char n3 = word.charAt(n2);
+	    	  boolean b1 = Character.isUpperCase(n3);
+	    	  boolean b2 = Character.isLowerCase(n3);
+	    	  if(b1&b2 == true)
+	    	  {
+	    		  b3 = true;
+	    	  }
+	    	  else
+	    	  {
+	    		  b3 = false;
+	    	  }
+	    	  n2 += 1;
+	       }
+	       if(b3 == true)
+	       {
+	    	   JOptionPane.showMessageDialog(null, "This is a mixture");
+	       }
+	       else
+	       {
+	    	   JOptionPane.showMessageDialog(null, "This is not a mixture");
+	       }
+}
+}
