@@ -6,22 +6,48 @@ class perfTask
 public static String word, word2 = "";
 public static void main(String[]args)
    {
-   test();
-   test2();
-   test3();
-   }
+	int value2 = 0;
+	int value3 = 0;
+	word = JOptionPane.showInputDialog("choose a String to have fun with!");
+	Object[] o2 = {"Yes", "No"};
+	question();
+	value2 = JOptionPane.showOptionDialog(null, "Are you having fun?, or do you want to keep your word?", "Loop", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,null,o2,null);
+	while(value2 == 0)
+	{
+		question();
+		value2 = JOptionPane.showOptionDialog(null, "Are you having fun?, or do you want to keep your word?", "Loop", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,null,o2,null);
+	}
+	JOptionPane.showMessageDialog(null, "That's a shame, see you next time! If you wanted to change your word run the program again to do so!");
+	}
+   public static void question()
+   {
+	   int value;
+	   Object[] o = {"Reverse", "Replace", "Mixture"}; 
+	   value = JOptionPane.showOptionDialog(null, "What do you want to do?", "Test", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null, o, null);
+		
+		if(value == 0)
+		{
+			test();
+		}
+		else if (value == 1)
+		{
+			test2();
+		}
+		else
+		{
+			test3();
+		}
+	   }
    public static void test()
    {
-     
-      word = JOptionPane.showInputDialog("Enter a string to reverse");
-           
+           	
       int leng2 = word.length();
      
       for (int i = leng2 - 1 ; i >= 0 ; i--)
          word2 = word2 + word.charAt(i);
          
       JOptionPane.showMessageDialog(null, word2);
-      
+      word2 = "";
    }
    public static void test2()
    {
@@ -32,7 +58,7 @@ public static void main(String[]args)
    word = word.replace('u', '*');
    JOptionPane.showMessageDialog(null, word);
    }
-   public static void test3()//Lol I'm pretty sure this is super inefficient. Mrs. Hunt, enlighten me!
+   public static void test3()
    {
 	   int n = word.length();
 	   int n2 = n-n;
