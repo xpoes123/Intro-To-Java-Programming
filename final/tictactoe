@@ -1,0 +1,108 @@
+import java.util.*;
+import javax.swing.*;
+public class operation2
+{
+static String[] game;
+static String input;
+static int n = 0;
+static boolean winx = false;
+static boolean wino = false;
+static String turn = "X";
+static String lvalue = "---";
+static String lvalue1 = "---";
+static String lvalue2 = "---";
+static String lvalue3 = "---";
+static String lvalue4 = "---";
+static String lvalue5 = "---";
+static String lvalue6 = "---";
+static String lvalue7 = "---";
+static Scanner in;
+
+public static void main(String[] args) {
+   game = new String[9];
+   for (int a = 0; a < 9; a++) {
+			game[a] = String.valueOf(a+1);
+         }
+         game();
+   int result = Integer.parseInt(input);	
+	System.out.println(result);
+   while(wino == false && winx == false)
+   {
+   if(result == n+1)
+   {
+   game[n] = String.valueOf(turn);
+   n += 1;
+   game();
+   result = Integer.parseInt(input);	
+   win();
+   if (turn.equals("X")) {
+					turn = "O";
+               n = 0;
+				} else {
+					turn = "X";
+               n = 0;
+				}
+   }
+   else
+   n += 1;
+   }
+   }
+   public static void win()
+   {
+				lvalue = game[0] + game[1] + game[2];
+				lvalue1 = game[3] + game[4] + game[5];
+				lvalue2 = game[6] + game[7] + game[8];
+				lvalue3 = game[0] + game[3] + game[6];
+				lvalue4 = game[1] + game[4] + game[7];
+				lvalue5 = game[2] + game[5] + game[8];
+				lvalue6 = game[0] + game[4] + game[8];
+				lvalue7 = game[2] + game[4] + game[6];
+			if (lvalue.equals("XXX")) {
+				winx = true;
+			} else if (lvalue.equals("OOO")) {
+				wino = true;
+			}
+         if (lvalue1.equals("XXX")) {
+				winx = true;
+			} else if (lvalue1.equals("OOO")) {
+				wino = true;
+			}
+         if (lvalue2.equals("XXX")) {
+				winx = true;
+			} else if (lvalue2.equals("OOO")) {
+				wino = true;
+			}
+         if (lvalue3.equals("XXX")) {
+				winx = true;
+			} else if (lvalue3.equals("OOO")) {
+				wino = true;
+			}
+         if (lvalue4.equals("XXX")) {
+				winx = true;
+			} else if (lvalue4.equals("OOO")) {
+				wino = true;
+			}
+         if (lvalue5.equals("XXX")) {
+				winx = true;
+			} else if (lvalue5.equals("OOO")) {
+				wino = true;
+			}
+         if (lvalue6.equals("XXX")) {
+				winx = true;
+			} else if (lvalue6.equals("OOO")) {
+				wino = true;
+			}
+         if (lvalue7.equals("XXX")) {
+				winx = true;
+			} else if (lvalue7.equals("OOO")) {
+				wino = true;
+			}
+		}
+
+   
+    public static void game()
+   {
+    input = JOptionPane.showInputDialog(game[0] + " | " + game[1] + " | " + game[2] + "\n----------- \n" + game[3] + " | " + game[4] + " | " + game[5]+"\n----------- \n" + game[6] + " | " + game[7] + " | " + game[8] + "\nChose a game space to occupy");
+       
+}
+}
