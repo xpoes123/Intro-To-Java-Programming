@@ -2,23 +2,18 @@
  * Programmer: David Jiang
  * Github: https://tinyurl.com/tictactoe-MHS
  * WIP
- _________   ___   ________                 _________   ________   ________                  ________    ________     
-|\___   ___\|\  \ |\   ____\               |\___   ___\|\   __  \ |\   ____\                |\   ___  \ |\   __  \    
-\|___ \  \_|\ \  \\ \  \___|   ____________\|___ \  \_|\ \  \|\  \\ \  \___|   ____________ \ \  \\ \  \\ \  \|\  \   
-     \ \  \  \ \  \\ \  \     |\____________\   \ \  \  \ \   __  \\ \  \     |\____________\\ \  \\ \  \\ \  \\\  \  
-      \ \  \  \ \  \\ \  \____\|____________|    \ \  \  \ \  \ \  \\ \  \____\|____________| \ \  \\ \  \\ \  \\\  \ 
-       \ \__\  \ \__\\ \_______\                  \ \__\  \ \__\ \__\\ \_______\               \ \__\\ \__\\ \_______\
-        \|__|   \|__| \|_______|                   \|__|   \|__|\|__| \|_______|                \|__| \|__| \|_______|
-                                                                                                                      
  */
 //imports
 import javax.swing.*;
-public class perfTask3
+import java.util.*;
+public class perfTaskTest
 {
 	//all my dumb variables 
 static String[] game;
 static String input;
+static Random rand = new Random();
 static int n = 0;
+static int ran;
 static int result = 0;
 static int counter = 0;
 static boolean winx = false;
@@ -43,29 +38,24 @@ public static void main(String[] args)
    {
 			game[a] = String.valueOf(a+1);
          }
-         game();
+         rob();
 			//asks the question on where they want to go
-         win();
-         //draw();//I have no idea where this needs to go
-   result = Integer.parseInt(input);	
+         //draw();//I have no idea where this needs to go	
    System.out.println(result);
    while(wino == false && winx == false)//game
    {
-	   win();
 	   //draw();//I have no idea where this needs to go
-	   javasucks();//this is where I got mad and didn't know how to test for winning, until I figured it out.
 	   
    if(result == n+1)//tests for whether the placement of the piece works, and then places the piece
    {
-	   if(idkx == true && idko == true)
+	   if(idkx == true || idko == true)
 	   {
-		  System.exit(1);
+		  //System.exit(1);
 	   }
 	   else
 	   {
 		   piece();
    game[n] = String.valueOf(turn);
-   n += 1;
  //turn switcheroo
    if (turn.equals("X")) 
    {
@@ -77,8 +67,7 @@ else
 		turn = "X";
   n = 0;
 	}
-   game();
-   result = Integer.parseInt(input);	
+   rob();
 	   }
    }
    else//finds the piece that the user wants to add to.
@@ -91,11 +80,11 @@ else
    {
 	   if(winx == true)
 	   {
-		   System.out.println("holy fuck this actually works");
+		   System.out.println("holy this actually works");
 	   }
 	   else if(wino == true)
 	   {
-		   System.out.println("Holy fuck this actually works");
+		   System.out.println("Holy this actually works");
 	   }
    }
    
@@ -213,7 +202,7 @@ else
    {
     	win();
       counter += 1;
-      if(counter < 10)
+      if(counter < 9)
       {
     	if(wino == false && winx == false)
     	{
@@ -225,23 +214,23 @@ else
     	   catch(NumberFormatException e)
     	   {
     	   JOptionPane.showMessageDialog(null, "Not a valid move");
-    	   System.exit(0);
+    	   //System.exit(0);
     	   }
     	}
       else
       {
-      System.exit(0);
+      JOptionPane.showMessageDialog(null, "Draw");
       }
    }
     }
-    
+
     public static void piece() 
     { 
     if(game[n] == "X")
     {
-    	JOptionPane.showMessageDialog(null,"That spot has already been taken and or draw");
-    	System.exit(1);
-    	idkx = true;
+    	JOptionPane.showMessageDialog(null,"That spot has already been taken and or draw" +  turn + result);
+      idkx = true;
+    	//System.exit(1);
     }
     else
     {
@@ -249,13 +238,31 @@ else
     }
     	if(game[n] == "O")
         {
-    		JOptionPane.showMessageDialog(null,"That spot has already been taken and or draw");
-    		System.exit(1);
-    		idko = true;
+    		JOptionPane.showMessageDialog(null,"That spot has already been taken and or draw" + turn + result);
+         idko = true;
+    		//System.exit(1);
         }
         else
         {
         	idko = false;
 }
     }
+    public static void rob()
+    {
+    if(turn == "O")
+    {
+    game();
+    }
+    else if(turn == "X")
+      {
+      while(idko == true || idko == true)
+      {
+      rand = new Random();
+      ran = rand.nextInt(8) + 1;
+      result = ran;
+      piece();
+      }
+      }
+      }
+
 }
