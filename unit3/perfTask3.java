@@ -5,28 +5,18 @@
  */
 //imports
 import javax.swing.*;
-public class testUnit3
+public class perfTask3
 {
 	//all my dumb variables 
 static String[] game;
 static String input;
 static int n = 0;
 static int result = 0;
+static int counter = 0;
 static boolean winx = false;
 static boolean wino = false;
 static boolean idkx = false;
 static boolean idko = false;
-static boolean draw = false;
-static boolean draw1 = false;
-static boolean draw2 = false;
-static boolean draw3 = false;
-static boolean draw4 = false;
-static boolean draw5 = false;
-static boolean draw6 = false;
-static boolean draw7 = false;
-static boolean draw8 = false;
-static boolean draw9 = false;
-
 static String turn = "O";
 static String lvalue = "---";
 static String lvalue1 = "---";
@@ -48,13 +38,13 @@ public static void main(String[] args)
          game();
 			//asks the question on where they want to go
          win();
-         draw();//I have no idea where this needs to go
+         //draw();//I have no idea where this needs to go
    result = Integer.parseInt(input);	
    System.out.println(result);
    while(wino == false && winx == false)//game
    {
 	   win();
-	   draw();//I have no idea where this needs to go
+	   //draw();//I have no idea where this needs to go
 	   javasucks();//this is where I got mad and didn't know how to test for winning, until I figured it out.
 	   
    if(result == n+1)//tests for whether the placement of the piece works, and then places the piece
@@ -119,51 +109,61 @@ else
 				{
 				winx = true;
 				   JOptionPane.showMessageDialog(null, "Conrgrats! X wins!");//win tester
+               counter = 0;
 			} 
 				else if (lvalue.equals("OOO")) 
 				{
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
          if (lvalue1.equals("XXX")) 
          {
 				winx = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! X wins!");//win tester
+            counter = 0;
 			} 
          else if (lvalue1.equals("OOO")) 
          {
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
          if (lvalue2.equals("XXX")) 
          {
 				winx = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! X wins!");//win tester
+            counter = 0;
 			} 
          else if (lvalue2.equals("OOO")) 
          {
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
          if (lvalue3.equals("XXX")) 
          {
 				winx = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! X wins!");//win tester
+            counter = 0;
 			} 
          else if (lvalue3.equals("OOO")) 
          {
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
          if (lvalue4.equals("XXX")) 
          {
 				winx = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! X wins!");//win tester
+            counter = 0;
 			} 
          else if (lvalue4.equals("OOO")) 
          {
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
          if (lvalue5.equals("XXX")) 
          {
@@ -174,84 +174,39 @@ else
          {
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
          if (lvalue6.equals("XXX")) 
          {
 				winx = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! X wins!");//win tester
+            counter = 0;
 			} 
          else if (lvalue6.equals("OOO")) 
          {
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
          if (lvalue7.equals("XXX")) 
          {
 				winx = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! X wins!");//win tester
+            counter = 0;
 			} 
          else if (lvalue7.equals("OOO")) 
          {
 				wino = true;
 				JOptionPane.showMessageDialog(null, "Conrgrats! O wins!");
+            counter = 0;
 			}
    }
-	public static void draw()
-	{
-   	while(draw == false)
-   	{
-   		if(game[0] == "X" || game[1] =="O")
-   		{
-   			draw1 = true;
-   		}
-   		else if (game[1] == "X" || game[1] == "O")
-   		{
-   			draw2 = true;
-   		}
-   		else if (game[2] == "X" || game[2] == "O")
-   		{
-   			draw3 = true;
-   		}
-   		else if (game[3] == "X" || game[3] == "O")
-   		{
-   			draw4 = true;
-   		}
-   		else if (game[4] == "X" || game[4] == "O")
-   		{
-   			draw5 = true;
-   		}
-   		else if (game[5] == "X" || game[5] == "O")
-   		{
-   			draw6 = true;
-   		}
-   		else if (game[6] == "X" || game[6] == "O")
-   		{
-   			draw7 = true;
-   		}
-   		else if (game[7] == "X" || game[7] == "O")
-   		{
-   			draw8 = true;
-   		}
-   		else if (game[8] == "X" || game[8] == "O")
-   		{
-   			draw9 = true;
-   		}
-   		
-   		if(draw1 == true && draw2 == true && draw3 == true && draw4 == true && draw5 == true && draw6 == true && draw7 == true && draw8 == true && draw9 == true)
-   		{
-   			draw = true;
-   			
-   		}
-   		else
-   		{
-   			draw = false;
-   		}
-   	}
-   }
-
     public static void game()//calls the question
    {
     	win();
+      counter += 1;
+      if(counter < 10)
+      {
     	if(wino == false && winx == false)
     	{
     //game board setup
@@ -265,14 +220,18 @@ else
     	   System.exit(0);
     	   }
     	}
-}
-    
+      else
+      {
+      System.exit(0);
+      }
+   }
+    }
     
     public static void piece() 
     { 
     if(game[n] == "X")
     {
-    	JOptionPane.showMessageDialog(null,"That spot has already been taken");
+    	JOptionPane.showMessageDialog(null,"That spot has already been taken and or draw");
     	System.exit(1);
     	idkx = true;
     }
@@ -282,7 +241,7 @@ else
     }
     	if(game[n] == "O")
         {
-    		JOptionPane.showMessageDialog(null,"That spot has already been taken");
+    		JOptionPane.showMessageDialog(null,"That spot has already been taken and or draw");
     		System.exit(1);
     		idko = true;
         }
